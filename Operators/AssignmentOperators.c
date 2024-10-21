@@ -81,4 +81,4 @@ int main() {
     // Don't change below this line
     printf("a = %d, b = %d, c = %d", a, b, c);
     return 0;
-};
+}
