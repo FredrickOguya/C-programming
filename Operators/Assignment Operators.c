@@ -79,6 +79,6 @@ int main() {
     c *= a;
     
     // Don't change below this line
-    printf("a = %d, b = %d, c = %d", a, b, c);
+    printf("a = %d\nb = %d\nc = %d\n", a, b, c);
     return 0;
 }
