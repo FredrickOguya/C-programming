@@ -77,10 +77,10 @@ int main() {
     // Write code here
     int n1;
     int n2;
-
+    printf("Enter the numbers to be added: \n");
     scanf("%d %d",&n1,&n2);
     int n3 =n1 +n2;
 
-    printf("%d",n3);
+    printf("%d + %d = %d\n",n1,n2,n3);
     return 0;
 };
