@@ -92,6 +92,6 @@ int main() {
     int b3 = b1 && b2;
     
     // Don't change below this line
-    printf("b3 = %d", b3);
+    printf("b3 = %d\n", b3);
     return 0;
 };
