@@ -18,3 +18,13 @@ Revealed
 
 c and d should be of type int
 */
+#include <stdio.h>
+
+int main(){
+    int a=5,b=3,c,d;
+
+    c= a+b;
+    d=a>c;
+
+    printf("a = %d\nb = %d\nc = %d\nd = %d\n",a,b,c,d);
+}
