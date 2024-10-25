@@ -61,6 +61,6 @@ int main() {
     count++;
     count++;
     // Don't change below this line
-    printf("count = %d", count);
+    printf("count = %d\n", count);
     return 0;
 };
