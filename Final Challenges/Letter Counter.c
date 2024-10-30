@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include <string.h>
-int main() {
-    char c;
-    int num;
-    printf("Enter a character: ");
-     
-    while (c!='$'){
-        scanf("%c", &c);
-        num+=1;
+
+int main()
+{
+    char ch = getchar();
+    int cha = 0;
+    while (ch!= '$')
+    {
+        if(ch!=' ' && cha != '\n'){
+            cha++;
+        }
+        ch = getchar();
     }
-    printf("%d\n",num);
+    printf("%d",cha);
     return 0;
 }
