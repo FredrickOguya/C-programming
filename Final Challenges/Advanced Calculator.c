@@ -13,6 +13,7 @@ Check the test cases for examples
 #include <stdio.h>
 
 int main(){
+    int ch= getchar();
     int opp='e',num1,num2;
     if ()
 
