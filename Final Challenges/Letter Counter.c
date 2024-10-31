@@ -3,11 +3,11 @@
 
 int main()
 {
-    char ch = getchar();
+    int ch = getchar();
     int cha = 0;
     while (ch!= '$')
     {
-        if(ch!=' ' && cha != '\n'){
+        if(ch!=' ' && ch != '\n'){
             cha++;
         }
         ch = getchar();
