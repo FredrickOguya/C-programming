@@ -28,32 +28,45 @@ Revealed
 
 Notice that the board always has 9 cells, so you will need to save all the data in exactly 9 variables!
 */
-
 #include <stdio.h>
 
-int main(){
-    char A1,A2,A3,B1,B2,B3,C1,C2,C3;
-    printf("Enter the Characters\n");
-    scanf("%c %c %c %c %c %c %c %c %c",&A1,&A2,&A3,&B1,&B2,&B3,&C1,&C2,&C3);
-    printf("%c %c %c\n%c %c %c\n%c %c %c\n",A1,A2,A3,B1,B2,B3,C1,C2,C3);
+int main() {
+    char board[3][3];
 
-    if(B1&&B2&&B3=='x'){
-        printf("x is the winner\n");
-    }else if(A2&&B2&&C2=='x'){
-        printf("x is the winner\n");
-    }else if(A1&&B2&&C3=='x'){
-        printf("x is the winner\n");
-    }else if(A3&&B2&&C1=='x'){
-        printf("x is the winner\n");
-    }else if(B1&&B2&&B3=='o'){
-        printf("o is the winner\n");
-    }else if(A2&&B2&&C2=='o'){
-        printf("o is the winner\n");
-    }else if(A1&&B2&&C3=='o'){
-        printf("o is the winner\n");
-    }else if(A3&&B2&&C1=='o'){
-        printf("o is the winner\n");
+    // Read the board's characters
+    scanf("%c %c %c\n%c %c %c\n%c %c %c\n", 
+          &board[0][0], &board[0][1], &board[0][2], 
+          &board[1][0], &board[1][1], &board[1][2], 
+          &board[2][0], &board[2][1], &board[2][2]);
+
+    // Check rows and columns for a winner
+    for (int i = 0; i < 3; i++) {
+        // Check rows
+        if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') {
+            printf("%c is the winner\n", board[i][0]);
+            return 0;
+        }
+
+        // Check columns
+        if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ') {
+            printf("%c is the winner\n", board[0][i]);
+            return 0;
+        }
     }
-    return 0;
 
+    // Check diagonals for a winner
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
+        printf("%c is the winner\n", board[0][0]);
+        return 0;
+    }
+    if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
+        printf("%c is the winner\n", board[0][2]);
+        return 0;
+    }
+
+    // If no winner, it's a draw
+    printf("Draw\n");
+
+    return 0;
 }
+
