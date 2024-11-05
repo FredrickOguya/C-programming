@@ -7,7 +7,7 @@ int main(){
     printf("Enter the three variables a,b and c:\n");
     scanf("%d %d %d",&a,&b,&c);
 
-    d= sqrt(b*b-4*a*c);
+    d= b*b-4*a*c;
 
     printf("%d",d);
 
