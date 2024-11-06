@@ -1,22 +1,17 @@
 #include <stdio.h>
 
 int main(){
-    int n,num, digits, rev=0;
-    printf("Enter a number to reverse : ");
+    int inp,num,digits,rev=0;
+    printf("Enter the number for checking\n");
     scanf("%d",&num);
-    n=num;
-    do{
+    inp = num;
+    do{   
         digits = num%10;
-        rev = rev*10+digits;
-        num=num/10;
+        rev=rev*10+digits;
+        num/=10;
     }while(num>0);
 
-    if(n==rev){
-        printf("%d is a palindrome",n);
-    }else{
-        printf("%d is not a palindrome",n);
-    }
-    printf("\n");
-    return 0;
+    rev ==inp ? printf("the number is a palindrome\n"):printf("the number is not a palindrome\n");
 
-}
+    return 0;
+    }
