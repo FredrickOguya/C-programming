@@ -66,6 +66,7 @@
     "pseudocode"
   ],
   "files.associations": {
-    "cstdio": "c"
+    "cstdio": "c",
+    "random": "c"
   }
 }
